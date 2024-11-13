@@ -1,0 +1,21 @@
+{
+  "name": "jsapi-vite-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run copy:assets && vite",
+    "build": "npm run copy:assets && tsc && vite build",
+    "preview": "vite preview",
+    "copy:assets": "cpx \"node_modules/@esri/calcite-components/dist/calcite/assets/**/*\" \"./public/assets/\""
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.3"
+  },
+  "dependencies": {
+    "@arcgis/core": "4.31.0",
+    "@esri/calcite-components": "^2.13.0"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArcGIS JS API - Vite + TS</title>
+</head>
+
+<body>
+  <calcite-shell content-behind>
+    <calcite-navigation slot="header">
+      <calcite-navigation-logo id="header-title" heading-level="1" slot="logo">
+      </calcite-navigation-logo>
+    </calcite-navigation>
+
+    <calcite-shell-panel slot="panel-start" display-mode="float">
+      <calcite-action-bar slot="action-bar">
+        <calcite-action data-action-id="layers" icon="layers" text="Layers"></calcite-action>
+      </calcite-action-bar>
+
+      <calcite-panel heading="SpatialReference" height-scale="l" data-panel-id="layers">
+        <calcite-radio-button-group id="srs-radio-group" name="SpatialReferences" layout="vertical">
+          <calcite-label layout="inline">
+            <calcite-radio-button value="3857" checked></calcite-radio-button>
+            EPSG:3857
+          </calcite-label>
+          <calcite-label layout="inline">
+            <calcite-radio-button value="4326"></calcite-radio-button>
+            EPSG:4326
+          </calcite-label>
+          <calcite-label layout="inline">
+            <calcite-radio-button value="25832"></calcite-radio-button>
+            EPSG:25832
+          </calcite-label>
+          <calcite-label layout="inline">
+            <calcite-radio-button value="25833"></calcite-radio-button>
+            EPSG:25833
+          </calcite-label>
+        </calcite-radio-button-group>
+        <div id="layers-container"></div>
+      </calcite-panel>
+    </calcite-shell-panel>
+
+    <div id="viewDiv"></div>
+  </calcite-shell>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
