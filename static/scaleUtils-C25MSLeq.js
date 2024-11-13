@@ -1,1 +1,0 @@
-import{bj as o,bk as u,bl as c}from"./index-BPaEurMl.js";const e=96;function b(n,t){const r=n.extent,i=n.width,f=o(r==null?void 0:r.spatialReference);return r&&i?r.width/i*f*u*e:0}function d(n,t){return n/(o(t)*u*e)}function m(n,t,r){return a(n,t)&&s(n,r)}function a(n,t){return t===0||c(n,t)||n<t}function s(n,t){return t===0||c(n,t)||n>t}export{m as d,b as i,d as o};
