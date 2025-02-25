@@ -1,0 +1,1 @@
+import{aE as e,aD as f}from"./index-DKbcOXvO.js";import{p as s}from"./queryTopFeatures-CXeUZoaj.js";import n from"./TopFeaturesQuery-C-B0v3Rh.js";import"./query-BjWjpyMW.js";import"./pbfQueryUtils-BvVNb_8W.js";import"./pbf-GrhhwAw9.js";async function w(r,o,t,m){const a=e(r),i={...m},{data:p}=await s(a,n.from(o),t,i);return f.fromJSON(p)}export{w as executeTopFeaturesQuery};

@@ -1,0 +1,1 @@
+import{aE as v,eT as c,eU as d,a4 as $}from"./index-DKbcOXvO.js";async function I(e,n,a){const s=v(e),o=n.toJSON(),r=c(s.query,{query:d({...o,f:"json"}),...a}),i=`${s.path}/versionInfos`,{data:t}=await $(i,r);return t.versions.map(f=>{const{versionName:u,versionGuid:m,...p}=f;return{...p,versionIdentifier:{name:u,guid:m}}})}export{I as getVersionInfos};
