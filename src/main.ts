@@ -111,7 +111,7 @@ function loadVineryLayer(map: Map) {
           "https://www.arcgis.com/sharing/rest/content/items/c71b13cf8f28452faf91ad0552574d24/data",
         name: "Mangrove_Common_5",
       },
-    } as __esri.RendererProperties,
+    },
     popupTemplate: {
       title: "{name}",
       content: [
