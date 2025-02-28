@@ -25,7 +25,7 @@ import "@esri/calcite-components/dist/components/calcite-radio-button-group";
 
 import "./style.css";
 
-setAssetPath("/assets");
+setAssetPath("./assets");
 
 const map = new Map({
   basemap: "gray-vector",
