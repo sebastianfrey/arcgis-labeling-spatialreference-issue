@@ -1,1 +1,0 @@
-import{aE as f,eT as c,eU as p,a4 as v}from"./index-DKbcOXvO.js";async function h(a,i,o){const e=f(a),t=i.toJSON(),r=c(e.query,{query:p({...t,f:"json"}),...o,authMode:"immediate",method:"post"}),s=`${e.path}/create`,{data:n}=await v(s,r),{versionName:d,versionGuid:m,...u}=n.versionInfo;return{...u,versionIdentifier:{name:d,guid:m}}}export{h as createVersion};
