@@ -37,7 +37,7 @@ const view = new MapView({
   spatialReference: {
     wkid: 3857,
   },
-  zoom: 12,
+  zoom: 3,
   center: [6.93, 49.87],
   padding: {
     left: 49,
@@ -72,61 +72,6 @@ function loadWorldCupLayer(map: Map) {
     ],
   });
   map.add(worldCupLayer);
-}
-
-function loadVineryLayer(map: Map) {
-  const vineryLayer = new OGCFeatureLayer({
-    url: "https://demo.ldproxy.net/vineyards", // url to the OGC landing page
-    collectionId: "vineyards", // unique id of the collection
-    // define labeling
-    labelingInfo: [
-      {
-        labelExpressionInfo: {
-          expression: "$feature.NAME",
-        },
-        symbol: {
-          type: "text",
-          color: "#4a6741",
-          haloSize: 1,
-          haloColor: "white",
-          font: {
-            family: "IM FELL DW Pica PRO",
-            style: "italic",
-            weight: "normal",
-            size: 20,
-          },
-        },
-        maxScale: 0,
-        minScale: 0,
-      },
-    ],
-    // hide the vineyards in very small scales
-    minScale: 5000000,
-    // define rendering
-    renderer: {
-      type: "simple",
-      symbol: {
-        type: "web-style", // autocasts to WebStyleSymbol
-        styleUrl:
-          "https://www.arcgis.com/sharing/rest/content/items/c71b13cf8f28452faf91ad0552574d24/data",
-        name: "Mangrove_Common_5",
-      },
-    },
-    popupTemplate: {
-      title: "{name}",
-      content: [
-        {
-          type: "text",
-          text: "The {name} vineyard is {area_ha} hectares and resides in {village} village. It is within the {region} region and the {subregion} subregion. ",
-        },
-      ],
-    },
-    opacity: 0.6,
-    // display the attribution
-    copyright:
-      "Landwirtschaftskammer RLP (2020), dl-de/by-2-0, <a href='http://weinlagen.lwk-rlp.de/'' target='_blank'>weinlagen.lwk-rlp.de</a>, <a href='http://weinlagen.lwk-rlp.de/portal/nutzungsbedingungen/gewaehrleistung-haftung.html' target='_blank'>Regelungen zu Gewährleistung und Haftung</a>",
-  });
-  map.add(vineryLayer);
 }
 
 function loadLakesLayers(map: Map) {
@@ -194,7 +139,6 @@ view.when(() => {
     });
 
   loadLakesLayers(map);
-  loadVineryLayer(map);
   loadWorldCupLayer(map);
 });
 
