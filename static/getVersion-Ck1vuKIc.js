@@ -1,1 +1,0 @@
-import{aE as d,eT as f,eU as m,ad as p,a4 as v}from"./index-Cf67L9ml.js";async function $(e,s,i){const a=d(e),r=f(a.query,{query:m({f:"json"}),...i});s.startsWith("{")&&(s=s.slice(1,-1));const t=p(a.path,"versions",s),{data:o}=await v(t,r),{versionName:n,versionGuid:u,...c}=o;return{...c,versionIdentifier:{name:n,guid:u}}}export{$ as getVersion};
